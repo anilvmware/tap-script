@@ -372,7 +372,7 @@ fi
 #         pivnet download-product-files --product-slug='tanzu-application-platform' --release-version='1.4.0' --product-file-id=1404618
        pivnet download-product-files --product-slug='tanzu-application-platform' --release-version='1.3.0' --product-file-id=1310085
      mkdir $HOME/tanzu
-#        tar -xvf tanzu-framework-linux-amd64-v0.25.4.tar -C $HOME/tanzu
+#        tar -xvf tanzu-framework-linux-amd64-v0.25.4.1.tar -C $HOME/tanzu
         tar -xvf tanzu-framework-linux-amd64.tar -C $HOME/tanzu
      export TANZU_CLI_NO_INIT=true
      cd $HOME/tanzu
