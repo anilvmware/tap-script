@@ -50,7 +50,7 @@ if [ "$cloud" == "AKS" ];
 	 az group create --name navin-tap-workshop-imagerepo-RG --location $region
 	 echo "####### Create container registry  ############"
          echo "#####################################################################################################"
-	 az acr create --resource-group navin-tap-workshop-imagerepo-RG --name taptestdemoacr --sku Standard
+	 az acr create --resource-group navin-tap-workshop-imagerepo-RG --name navintapdemoacr --sku Standard
 	 echo "####### Fetching acr Admin credentials ##########"
 	 az acr update -n taptestdemoacr --admin-enabled true
          acrusername=$(az acr credential show --name taptestdemoacr --query "username" -o tsv)
