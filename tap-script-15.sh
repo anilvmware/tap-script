@@ -54,11 +54,11 @@ if [ "$cloud" == "AKS" ];
 	 echo "####### Fetching acr Admin credentials ##########"
 	 az acr update -n taptestdemoacr --admin-enabled true
          acrusername=$(az acr credential show --name taptestdemoacr --query "username" -o tsv)
-         acrloginserver=$(az acr show --name taptestdemoacr --query loginServer -o tsv)
+         acrloginserver=$(az acr show --name tanzutaptestdemoacr --query loginServer -o tsv)
          acrpassword=$(az acr credential show --name taptestdemoacr --query passwords[0].value -o tsv)
          if grep -q "/"  <<< "$acrpassword";
              then
-	        acrpassword1=$(az acr credential show --name taptestdemoacr --query passwords[1].value -o tsv)
+	        acrpassword1=$(az acr credential show --name tanzutaptestdemoacr --query passwords[1].value -o tsv)
 	        if grep -q "/"  <<< "$acrpassword1";
 	          then
                 	   echo "##########################################################################"
